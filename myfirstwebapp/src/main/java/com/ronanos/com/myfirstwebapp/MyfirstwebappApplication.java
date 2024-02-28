@@ -1,12 +1,13 @@
-package com.ronanos.springboot.learnspringboot;
+package com.ronanos.com.myfirstwebapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LearnSpringBootApplication {
+public class MyfirstwebappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LearnSpringBootApplication.class, args);
+		SpringApplication.run(MyfirstwebappApplication.class, args);
 	}
+
 }
