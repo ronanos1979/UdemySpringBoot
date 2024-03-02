@@ -1,13 +1,6 @@
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link href="webjars/bootstrap/5.3.3/css/bootstrap.css" rel="stylesheet">
-<link href="webjars/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
-<title>List Todos Page</title>
-</head>
-<body>
 <div class="container">
 	<div>Welcome ${name}</div>
 	<hr>
@@ -36,10 +29,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="add-todo" class="btn btn-success">Add Todo</a>
-	<script src="webjars/bootstrap/5.3.3/js/bootstrap.js"></script>
-	<script src="webjars/jquery/3.7.1/jquery.js"></script>
-	<script src="webjars/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.js"></script>
+<a href="add-todo" class="btn btn-success">Add Todo</a>
 </div>
-</body>
-</html>
+<%@ include file="common/footer.jspf" %>
+	
