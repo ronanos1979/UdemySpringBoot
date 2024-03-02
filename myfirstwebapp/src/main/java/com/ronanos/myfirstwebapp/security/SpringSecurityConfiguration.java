@@ -1,4 +1,4 @@
-package com.ronanos.com.myfirstwebapp.security;
+package com.ronanos.myfirstwebapp.security;
 
 import java.util.function.Function;
 

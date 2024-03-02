@@ -1,4 +1,4 @@
-package com.ronanos.com.myfirstwebapp.login;
+package com.ronanos.myfirstwebapp.login;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

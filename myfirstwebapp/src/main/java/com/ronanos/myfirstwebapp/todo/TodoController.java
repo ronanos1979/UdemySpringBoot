@@ -1,4 +1,4 @@
-package com.ronanos.com.myfirstwebapp.todo;
+package com.ronanos.myfirstwebapp.todo;
 
 import java.time.LocalDate;
 import java.util.List;
