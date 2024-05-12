@@ -2,16 +2,17 @@ package com.ronanos.myfirstwebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
+@Entity(name = "Todo")
 public class Todo {
-
-	private int id;
-	private String username;
-	@Size(min=5, message="Minimum length is 5 characters")
-	private String description;
-	private LocalDate targetDate;
-	private boolean done;
+	public Todo() {
+		
+	}
 	
 	public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();
@@ -21,6 +22,17 @@ public class Todo {
 		this.targetDate = targetDate;
 		this.done = done;
 	}
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+//	@Column (name="username")
+	private String username;
+	@Size(min=5, message="Minimum length is 5 characters")
+	private String description;
+	private LocalDate targetDate;
+	private boolean done;
 	
 	public int getId() {
 		return id;

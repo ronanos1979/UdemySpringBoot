@@ -114,3 +114,77 @@ Use thoughtworks radar
 	
 3. Add Validations to Bean
 4. Display Validation Errors in the View
+
+
+
+##  JDBC to Spring JDBC
+
+### JDBC Example
+* Write a lot of SQL queries
+* And a lot of JAVA Code
+
+```
+	String DELETE_TODO_QUERY=DELETE FROM TODOY WHERE ID=?";
+public void deleteTodo (int id) {
+	PreparedStatement st = null;
+	try {
+		st = db.conn.prepareStatement(DELETE_TODO_QUERY);
+		st.setInt(1, id);
+		st.execute();
+	} catch (SQLException e) {
+		logger.fatal("Query Failed: " + DELETE_TODO_QUERY, e);
+	} finally {
+		if (st != null) {
+			try {st.close();]
+			catch (SQLException e) {}
+		}
+	}
+]	
+```
+
+### Spring JDBC Example
+* Write a lot of SQL Queryes
+* But not as much JAVA Code
+
+```
+String DELETE_TODO_QUERY=DELETE FROM TODOY WHERE ID=?";
+public void deleteTodo(int id) {
+	jdbcTemplate.update(DELETE_TODO_QUERY, id);	
+}
+```
+
+### JPA Java Persistence API
+* Do not worry about queries
+* Just Map Entities to Tables
+* Don't really write special code, just JAVA code
+
+```
+return entityManager.find(Person.class, id);
+```
+
+### Spring Data JPA
+* Make JPA even more simple
+
+```
+public interface TodoRespoiutory extends JpaRepository<Todo, Integer>{}
+```
+
+## Docker
+
+### Docker MySQL
+docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=todos-user --env MYSQL_PASSWORD=dummytodos --env MYSQL_DATABASE=todos --name mysql --publish 3306:3306 mysql:8-oracle
+
+
+### Docker commands
+
+```
+docker ls
+docker ps -a
+docker stop mycontainer
+```
+
+
+
+
+
+	

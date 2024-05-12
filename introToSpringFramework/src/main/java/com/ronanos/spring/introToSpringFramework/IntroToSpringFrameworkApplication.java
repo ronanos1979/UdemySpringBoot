@@ -18,7 +18,7 @@ public class IntroToSpringFrameworkApplication {
 		// MarioGame game = new MarioGame();
 		// SuperContraGame game = new SuperContraGame();
 		//		PacmanGame game = new PacmanGame();
-		// GamingConsole game = new MarioGame()j;<
+		// GamingConsole game = new MarioGame();<
 		// GameRunner runner = new GameRunner(game);
 		
 		GameRunner runner = context.getBean(GameRunner.class);

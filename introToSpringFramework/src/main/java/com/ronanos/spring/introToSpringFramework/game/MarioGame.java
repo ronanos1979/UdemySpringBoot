@@ -1,5 +1,6 @@
 package com.ronanos.spring.introToSpringFramework.game;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
