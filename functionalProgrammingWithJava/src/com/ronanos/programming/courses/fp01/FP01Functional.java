@@ -6,10 +6,13 @@ public class FP01Functional {
 
 	public static void main(String[] args) {
 		List<Integer> numbers = List.of(12,9,4,3,2,1,12,14,5,2);
+		System.out.println("Print all numbers in list");
 		printAllNumbersInListFunctional(numbers);
 		System.out.println(" ");
+		System.out.println("Print all even numbers in List");
 		printEvenNumbersInListFunctional(numbers);
 		System.out.println(" ");
+		System.out.println("Print Squares of even numbers in list");
 		printSquaresOfEvenNumbersInListFunctional(numbers);
 
 		

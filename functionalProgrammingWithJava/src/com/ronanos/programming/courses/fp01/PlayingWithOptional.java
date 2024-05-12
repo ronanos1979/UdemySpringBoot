@@ -14,18 +14,26 @@ public class PlayingWithOptional {
 		
 		Predicate<? super String> predicate = fruit -> fruit.startsWith("b");
 		Optional<String> optional = fruits.stream().filter(predicate).findFirst();
+		System.out.println("Optional");
 		System.out.println(optional);
+		System.out.println("Optional Is Empty");
 		System.out.println(optional.isEmpty());
+		System.out.println("Optional Is Present");
 		System.out.println(optional.isPresent());
+		System.out.println("Optional Get");
 		System.out.println(optional.get());
 		
 		System.out.println(" ");
 		
 		Predicate<? super String> predicate2 = fruit2 -> fruit2.startsWith("z");
 		Optional<String> optional2 = fruits2.stream().filter(predicate2).findFirst();
+		System.out.println("Optional2");
 		System.out.println(optional2);
+		System.out.println("Optional2 Is Empty");
 		System.out.println(optional2.isEmpty());
+		System.out.println("Optional2 Is Present");
 		System.out.println(optional2.isPresent());
+		System.out.println("Optional2 Get");
 		System.out.println(optional2.get());
 		
 		Optional<String> someFruit = Optional.of("strawberry");
