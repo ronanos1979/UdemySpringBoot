@@ -4,7 +4,7 @@
 <div class="container">
 	<div>Welcome ${name}</div>
 	<hr>
-	<h1> Your todos are:</h1>
+	<h1>The Implementers are:</h1>
 	<table class="table">
 		<thead>
 			<tr>
@@ -17,10 +17,10 @@
 			</tr>	
 		</thead>
 		<tbody>	
-			<c:forEach items="${todos}" var="todo">			
+			<c:forEach items="${implementers}" var="implementer">			
 				<tr>
-					<!--  <td>${todo.id}</td>  -->
-					<td>${todo.description}</td>
+					<!--  <td>${implementer.id}</td>  -->
+					<td>${implementer.description}</td>
 					<td>${todo.targetDate}</td>
 					<td>${todo.done}</td>
 					<td><a href="update-todo?id=${todo.id}" class="btn btn-primary">Update</a></td>
@@ -29,7 +29,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
-<a href="add-todo" class="btn btn-success">Add Todo</a>
+<a href="add-implementer" class="btn btn-success">Add Implementer</a>
 </div>
 <%@ include file="common/footer.jspf" %>
 	
