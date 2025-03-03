@@ -169,6 +169,17 @@ return entityManager.find(Person.class, id);
 public interface TodoRespoiutory extends JpaRepository<Todo, Integer>{}
 ```
 
+## Database
+### MySQL
+```
+create database todos;
+CREATE USER 'todos-user'@'localhost';
+GRANT ALL PRIVILEGES ON todos.* To 'todos-user'@'localhost';
+alter user 'todos-user'@'localhost' IDENTIFIED BY 'dummytodos';
+```
+
+
+
 ## Docker
 
 ### Docker MySQL
