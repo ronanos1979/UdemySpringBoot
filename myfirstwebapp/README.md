@@ -2,9 +2,12 @@
 ## Notes from UDemy Course
 
 ## GitHub Links
+Here is links to the github for this course
+
+```
 https://github.com/in28minutes/spring-boot-master-class/blob/master/02.Spring-Boot-Web-Application-V2/99-step-by-step-changes.md#step01
-and
 https://github.com/in28minutes/spring-boot-master-class/blob/master/02.Spring-Boot-Web-Application-V2/99-step-by-step-changes.md#step05
+```
 
 # Notes
 Passing from controller to JSP is by putting it into a model.
