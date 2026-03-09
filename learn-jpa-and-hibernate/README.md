@@ -1,12 +1,26 @@
 ##
 
 ## H2
+H2 is an in memory database.
+Add the following settings to the application.properties.
+
+```
 spring.h2.console.enabled=true
 spring.datasource.url=jdbc:h2:mem:testdb
+```
 
-
+Note the JDBC connection string. If you need to get the DB connection string get it from the console of the application.
 Access through console:
+
+```
 http://localhost:8080/h2-console
+```
+
+A sample query for this application is 
+
+```
+select * from COURSE
+```
 
 ## Summary
 
