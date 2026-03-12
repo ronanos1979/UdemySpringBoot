@@ -9,7 +9,7 @@ https://github.com/in28minutes/spring-boot-master-class/blob/master/02.Spring-Bo
 https://github.com/in28minutes/spring-boot-master-class/blob/master/02.Spring-Boot-Web-Application-V2/99-step-by-step-changes.md#step05
 ```
 
-# Notes
+## Notes
 Passing from controller to JSP is by putting it into a model.
 Spring MVC provides a model map.
 
@@ -196,9 +196,3 @@ docker ls
 docker ps -a
 docker stop mycontainer
 ```
-
-
-
-
-
-	
