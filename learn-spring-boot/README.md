@@ -84,7 +84,7 @@ Based on existing configuration via annotations.
 Autoconfiguration is defined in the spring-boot-autoconfigure.jar which is pulled in as a dependency.
 Change logging level of application and view the output to see what was autoconfigured in conditions evaluation report.
 
-1. Dispatcher Servlet (DispatcherSErvletAutoConfiguration)
+1. Dispatcher Servlet (DispatcherServletAutoConfiguration)
 2. Embedded servlet container. Tomcat is the default (EmbeddedWebServerFactoryCustomizerAutoConfiguration)
 3. Default Error Page (ERrorMvcAutoConfiguration)
 4. Bean <-> JSON (JacksonHttpMessageConvertersConfiguration)
@@ -102,7 +102,7 @@ mappings
 
 
 ## Spring Framework is all about dependency injection
-Defining dependencies ( through annotations @Component @Autowiredetc. )
+Defining dependencies ( through annotations @Component @Autowired etc. )
 Identifying dependencies ( using Component Scan on package )
 Autowiring them together.
 
@@ -119,15 +119,16 @@ Defines @Controller @RestController @RequestMapping("/something")
 Spring Boot is a Spring Project.
 Key feature is starter projects.
 e.g. web starter project.
+
 Autoconfiguration removes need to setup springMVC etc.
 Spring Boot also enables actuator etc.
 Provides default logging and error handling.
 
 ## Web Application
-1, Web App Concepts ( Browser, HTML, CSS, Request, Response, Form, Session, Authentication)
-2. Spring MVC )Dispatcher Servlet, View Resolvers, Model, View, Controller, Validations .. )
-3. Spring Boot (Starters, Auto Configuration, .. )
-4. Frameworks/Toiols (JSP, JSTL, JPA, Bootstrap, Spring Security, MySQL, H2)
+1. Web App Concepts (Browser, HTML, CSS, Request, Response, Form, Session, Authentication)
+2. Spring MVC (Dispatcher Servlet, View Resolvers, Model, View, Controller, Validations...)
+3. Spring Boot (Starters, Auto Configuration, ...)
+4. Frameworks/Tools (JSP, JSTL, JPA, Bootstrap, Spring Security, MySQL, H2)
 
 ## Github links
 https://github.com/in28minutes/spring-boot-master-class/tree/master/02.Spring-Boot-Web-Application-V2

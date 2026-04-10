@@ -196,3 +196,96 @@ docker ls
 docker ps -a
 docker stop mycontainer
 ```
+
+## Postgres
+### 
+
+Add the following to pom.xml
+
+```
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+<!--			<version>42.7.10</version> -->
+<!-- Replace with latest version -->
+			<scope>runtime</scope>
+		</dependency>
+```
+
+Also then add postgres properties to application.properties.
+
+```
+#spring.datasource.url=jdbc:h2:mem:testdbspring.jpa.defer-datasource-initialization=true
+spring.jpa.show-sql=true
+
+
+# POSTGRESQL
+# Automatically create/update tables at startup
+spring.jpa.hibernate.ddl-auto=update
+
+# PostgreSQL datasource
+spring.datasource.url=jdbc:postgresql://localhost:5432/todos
+spring.datasource.username=todos-user
+spring.datasource.password=dummytodos
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Hibernate dialect for PostgreSQL
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# Let Hibernate generate DDL
+spring.jpa.generate-ddl=true
+
+```
+
+### PostGres Config
+Can be done in the UI of pgAdmin 
+or
+
+Add the following folder to the Path env variable
+```
+C:\Program Files\PostgreSQL\18\bin
+```
+
+Then run 
+
+```
+psql -U postgres -h localhost
+```
+
+Then use this
+
+```
+CREATE DATABASE todos;
+CREATE USER "todos-user" WITH PASSWORD 'dummytodos';
+GRANT ALL PRIVILEGES ON DATABASE todos TO "todos-user";
+\c todos
+-- allow the user to use the schema
+GRANT USAGE ON SCHEMA public TO "todos-user";
+-- allow the user to create tables in the schema
+GRANT CREATE ON SCHEMA public TO "todos-user";
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO "todos-user";
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO "todos-user";
+```
+
+Below is what it is for with more detail.
+
+```
+-- 1. create database
+CREATE DATABASE todos;
+
+-- 2. create user
+CREATE USER "todos-user" WITH PASSWORD 'dummytodos';
+
+-- 3. grant database privileges
+GRANT ALL PRIVILEGES ON DATABASE todos TO "todos-user";
+
+-- 4. (optional) grant table privileges for public schema
+\c todos  -- connect to the todos database
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO "todos-user";
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO "todos-user";
+```
+
+
+
