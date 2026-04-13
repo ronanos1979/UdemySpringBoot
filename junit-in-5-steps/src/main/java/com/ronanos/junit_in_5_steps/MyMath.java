@@ -1,4 +1,4 @@
-package com.ronanos.junit;
+package com.ronanos.junit_in_5_steps;
 
 public class MyMath {
 	// {1,2,3} => 1+2+3 = 6

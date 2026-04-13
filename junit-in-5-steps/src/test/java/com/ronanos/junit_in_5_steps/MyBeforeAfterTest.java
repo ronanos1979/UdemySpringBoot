@@ -1,4 +1,4 @@
-package com.ronanos.junit;
+package com.ronanos.junit_in_5_steps;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;

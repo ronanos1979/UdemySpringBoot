@@ -1,9 +1,9 @@
-package com.ronanos.junit;
+package com.ronanos.junit_in_5_steps;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +21,7 @@ class MyAssertTest {
 
 		assertEquals(true, test);
 		assertEquals(3, todos.size());
-		assertTrue("Something went wrong", test);
+//		assertTrue("Something went wrong", test);
 		assertEquals(false, test2);
 		assertTrue(test);
 		assertFalse(test2);
