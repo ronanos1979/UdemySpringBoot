@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="myfirstwebapp" />
+        <module name="junit-in-5-steps" />
+        <module name="mockitodemo" />
+        <module name="learn-spring-boot" />
+        <module name="fp01" />
+        <module name="learn-maven" />
+        <module name="first-rest-api" />
+        <module name="introToSpringFramework" />
+        <module name="learn-jpa-and-hibernate" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="first-rest-api" options="-parameters" />
+      <module name="introToSpringFramework" options="-parameters" />
+      <module name="junit-in-5-steps" options="-parameters" />
+      <module name="learn-gradle" options="-parameters" />
+      <module name="learn-gradle.main" options="-parameters" />
+      <module name="learn-gradle.test" options="-parameters" />
+      <module name="learn-jpa-and-hibernate" options="-parameters" />
+      <module name="learn-maven" options="-parameters" />
+      <module name="learn-spring-boot" options="-parameters" />
+      <module name="mockitodemo" options="-parameters" />
+      <module name="myfirstwebapp" options="-parameters" />
+    </option>
+  </component>
+</project>
